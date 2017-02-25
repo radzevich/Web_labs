@@ -53,10 +53,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 body {
 	font: 12px/18px Arial, sans-serif;
 	height: 100%;
-  width: 1750px;
 }
 .wrapper {
-	width: 100%;
+	/*width: 100%;*/
 	margin: 0 auto;
 	min-height: 100%;
 	height: auto !important;
@@ -67,25 +66,20 @@ body {
 /* Header
 -----------------------------------------------------------------------------*/
 .header {
-	height: 150px;
+	height: 200px;
   width: 100%;
-  padding: 40px 80px 0px 80px;
+  padding: 0px 0px 0px 0px;
 	background-image: url(../images/road.png);
   background-repeat: no-repeat;
-  display: inline-block;
-  font-size: 16px;
-  font-family: Geneva, sans-serif;
   border-bottom-style: groove;
   border-bottom-width: 3px;
 }
 
 .middle-line {
-  margin: 10px 150px;
-  padding-bottom: 10px;
-}
-
-.location {
-  width: 220px;
+  padding-top: 50px;
+  padding-left: 220px;
+  font-size: 16px;
+  font-family: Geneva, sans-serif;
 }
 
 .logo-location {
@@ -94,33 +88,25 @@ body {
 
 .contacts {
   float: right;
-  min-width: 500px;
-  margin-right: 50px;
+  width: 500px;
+  height: 100%;
+  padding-right: 150px
 }
 
 .mid-contacts {
-  width: 250px;
+  width: 220px;
+  height: 100%;
   float: left;
-  padding-right: 50px;
-}
-
-.phone-numbers {
-  width: 250px;
-  float: right;
 }
 
 .social-webs {
-  width: 250px;
+  width: 100%;
   float: left;
-  margin-left: -10px;  
 }
 
-#logo {
-  display: inline-block;
-  margin-top: 5px;
-}
-
-#location-text {
+.phone-numbers {
+  width: 170px;
+  height: 100%;
   float: right;
 }
 
@@ -139,21 +125,17 @@ body {
 
 ul#web-icons li {
   display: inline-block;
-  width: 40px;
   margin-left: 15px;
-  margin-top: 5px;
+  padding-top: 5px;
 }
 
 #web-icons img {
-  display: block;
   width: 50px;
-  padding-top: 5px;
-  padding-right: 20px;
 }
 
 #numbers li {
   float: right;
-  padding-top: 5px;
+  padding-top: 3px;
   height: 25px;
   width: 165px;
 }
