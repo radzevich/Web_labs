@@ -90,7 +90,8 @@ body {
   float: right;
   width: 500px;
   height: 100%;
-  padding-right: 150px
+  padding-right: 150px;
+  color: #3c0e4a;
 }
 
 .mid-contacts {
@@ -152,37 +153,49 @@ ul#web-icons li {
 -----------------------------------------------------------------------------*/
 .menu {
   width: 100%;
-  height: 40px;
-  display: inline-block;
-  margin-top: -6px;
-  padding-top: 15px;
-  padding-left: 220px;
+  height: 50px;
   font-family: Georgian, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
+  border-bottom-style: groove;
+  border-bottom-width: 3px;
+  text-align: center;
+  position: fixed;
 }
 
-.menu a {
+#items a {
   text-decoration: none;
-  color: #274141
+  color: #3c0e4a;
+}
+
+#items {
+  height: 100%;
 }
 
 .menu-items {
+  margin-left: 180px;
   float: left;
+  height: 100%;
 }
 
 .menu-items li {
   display: inline-block;
   width: auto;
+  height: 36px;
   padding-right: 40px;
+  padding-top: 14px;
 }
 
 .reserve-button {
   float: right;
-  width: 100px;
+  width: 160px;
+  height: 100%;
+  margin-right: 153px;
+  line-height: 1.2em;
 }
 
 .reserve-button a {
-  text-align: center;
+  text-decoration: none;
+  color: #3c0e4a; 
 }
 
 /* Middle
