@@ -66,11 +66,11 @@ body {
 /* Header
 -----------------------------------------------------------------------------*/
 .header {
-	height: 200px;
+	height: 500px;
   width: 100%;
   padding: 0px 0px;
   margin-bottom: 0px;
-	background-image: url(../images/road.png);
+	background-image: url(../images/rsz_1rsz_1rsz_road.png);
   background-repeat: no-repeat;
   /*border-bottom-style: groove;
   border-bottom-width: 3px;*/
@@ -82,11 +82,12 @@ body {
 
 .middle-line {
   padding-top: 50px;
-  padding-left: 220px;
+  padding-left: 460px;
   font-size: 16px;
 }
 
 .logo-location {
+  padding-top: 10px;
   float: left;
 }
 
@@ -169,14 +170,14 @@ ul#web-icons li {
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-size: 20px;
   font-weight: 500;
-  font-style: italic;
+  //*font-style: italic;*/
   padding-top: 0px;
   display: inline-block;
   /*border-bottom-style: groove;*/
   /*border-bottom-width: 3px;*/
   text-align: center;
   position: absolute;
-  background-color: #f1d034;
+  /*background-color: #f1d034;*/
 }
 
 #items a {
@@ -224,8 +225,8 @@ ul#web-icons li {
 }
 
 .main_information {
-  height: 8000px;
-  background-image: url(../images/bus1.jpg);
+  height: 800px;
+  background-image: url(../images/bus11.jpg);
   background-repeat: no-repeat;
 }
 
