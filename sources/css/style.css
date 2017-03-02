@@ -68,18 +68,22 @@ body {
 .header {
 	height: 200px;
   width: 100%;
-  padding: 0px 0px 0px 0px;
+  padding: 0px 0px;
+  margin-bottom: 0px;
 	background-image: url(../images/road.png);
   background-repeat: no-repeat;
-  border-bottom-style: groove;
-  border-bottom-width: 3px;
+  /*border-bottom-style: groove;
+  border-bottom-width: 3px;*/
+  font-family: Geneva, sans-serif;
+  position: absolute;
+  float: top;
+  display: inline-block;
 }
 
 .middle-line {
   padding-top: 50px;
   padding-left: 220px;
   font-size: 16px;
-  font-family: Geneva, sans-serif;
 }
 
 .logo-location {
@@ -91,7 +95,7 @@ body {
   width: 500px;
   height: 100%;
   padding-right: 150px;
-  color: #3c0e4a;
+  color: #180b7f;
 }
 
 .mid-contacts {
@@ -114,6 +118,7 @@ body {
 #location-image {
   width: 40px;
   float: left;
+  vertical-align: middle;
 }
 
 #slogan {
@@ -121,13 +126,14 @@ body {
   font-style: italic;
   font-family: Georgian, sans-serif;
   text-align: left;
-  color: #3c0e4a;
+  color: #180b7f;
 }
 
 ul#web-icons li {
   display: inline-block;
   margin-left: 15px;
   padding-top: 5px;
+  vertical-align: middle;
 }
 
 #web-icons img {
@@ -149,22 +155,33 @@ ul#web-icons li {
   float: right;
 }
 
+#location-text {
+  height: 40px;
+  padding-top: 6px;
+}
+
 /* Menu
 -----------------------------------------------------------------------------*/
 .menu {
   width: 100%;
   height: 50px;
-  font-family: Georgian, sans-serif;
+  margin-top: 200px;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-size: 20px;
-  border-bottom-style: groove;
-  border-bottom-width: 3px;
+  font-weight: 500;
+  font-style: italic;
+  padding-top: 0px;
+  display: inline-block;
+  /*border-bottom-style: groove;*/
+  /*border-bottom-width: 3px;*/
   text-align: center;
-  position: fixed;
+  position: absolute;
+  background-color: #f1d034;
 }
 
 #items a {
   text-decoration: none;
-  color: #3c0e4a;
+  color: #180b7f;
 }
 
 #items {
@@ -195,14 +212,21 @@ ul#web-icons li {
 
 .reserve-button a {
   text-decoration: none;
-  color: #3c0e4a; 
+  color: #180b7f; 
 }
 
 /* Middle
 -----------------------------------------------------------------------------*/
 .content {
-	padding: 0 0 50px;
-  color:beige;
+	padding: 0 0;
+  /*padding-top: 250px;*/
+  height: 100px;
+}
+
+.main_information {
+  height: 8000px;
+  background-image: url(../images/bus1.jpg);
+  background-repeat: no-repeat;
 }
 
 
