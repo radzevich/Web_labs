@@ -83,7 +83,7 @@ body {
 .middle-line {
   padding-top: 50px;
   padding-left: 460px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .logo-location {
@@ -93,25 +93,24 @@ body {
 
 .contacts {
   float: right;
-  width: 500px;
+  width: 520px;
   height: 100%;
-  padding-right: 150px;
-  color: #180b7f;
+  padding-right: 120px;
+  color: #130a5d;
 }
 
 .mid-contacts {
-  width: 220px;
+  width: 260px;
   height: 100%;
   float: left;
 }
 
 .social-webs {
   width: 100%;
-  float: left;
 }
 
 .phone-numbers {
-  width: 170px;
+  width: 180px;
   height: 100%;
   float: right;
 }
@@ -127,7 +126,7 @@ body {
   font-style: italic;
   font-family: Georgian, sans-serif;
   text-align: left;
-  color: #180b7f;
+  color: #130a5d;
 }
 
 ul#web-icons li {
@@ -145,7 +144,7 @@ ul#web-icons li {
   float: right;
   padding-top: 3px;
   height: 25px;
-  width: 165px;
+  width: 185px;
 }
 
 #numbers img {
@@ -161,6 +160,11 @@ ul#web-icons li {
   padding-top: 6px;
 }
 
+#location-text a {
+  text-decoration: none;
+  color: #130a5d; 
+}
+
 /* Menu
 -----------------------------------------------------------------------------*/
 .menu {
@@ -168,21 +172,17 @@ ul#web-icons li {
   height: 50px;
   margin-top: 200px;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
-  //*font-style: italic;*/
   padding-top: 0px;
   display: inline-block;
-  /*border-bottom-style: groove;*/
-  /*border-bottom-width: 3px;*/
   text-align: center;
   position: absolute;
-  /*background-color: #f1d034;*/
 }
 
 #items a {
   text-decoration: none;
-  color: #180b7f;
+  color: #130a5d;
 }
 
 #items {
@@ -200,20 +200,25 @@ ul#web-icons li {
   width: auto;
   height: 36px;
   padding-right: 40px;
-  padding-top: 14px;
+  padding-top: 20px;
 }
 
 .reserve-button {
-  float: right;
-  width: 160px;
-  height: 100%;
+  width: 195px;
+  height: 60px;
+  padding-top: 8px;
   margin-right: 153px;
+  margin-left: 1415px;
   line-height: 1.2em;
+  position: fixed;
+  background-image: url(../images/button.png);
+  background-size: 100% 100%;
 }
 
 .reserve-button a {
   text-decoration: none;
-  color: #180b7f; 
+  font-weight: bold;
+  color: #130a5d; 
 }
 
 /* Middle
@@ -235,32 +240,75 @@ ul#web-icons li {
   display: block;
 }
 
-.mercedes_img {
+.drivers {
   padding-left: 50px;
-  padding-top: 20px;
+  padding-top: 50px;
+  padding-bottom: 0px;
+  width: 95%;
+  display: inline-block;
 }
 
-.mercedes_img img{
-  width: 400px;
-  height: 500px;
+.drivers img{
+  width: 402px;
+  height: 560px;
+  float: left;
 }
 
 .company_info {
   float: right;
-  display: inline-block;
-  height: 100%;
-  
+  display: block;
+  height: 100%; 
 }
 
+.drivers_char h1 {
+  float: right;
+  width: 75%;
+  height: 100px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 45px;
+  line-height: 1.0em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.drivers_char p {
+  font-size: 26px;
+  line-height: 1.2em;
+  width: 70%;
+  padding-left: 500px;
+  padding-top: 130px;
+}
+
+.background_mercedes {
+  height: 970px;
+  background-image: url(../images/bus7.jpg);
+  background-repeat: no-repeat;
+}
+
+#butterfly {
+  margin-left: 465px;
+  margin-top: 50px;
+  height: 200px;
+  width: 300px;
+}
+
+#wifi {
+  margin-left: 550px;
+  margin-top: 50px;
+  height: 150px;
+  width: 150px;
+}
 
 
 
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {
-	margin: -50px auto 0;
+	margin-top: 2350px;
 	min-width: 800px;
 	max-width: 1920px;
-	height: 50px;
+	height: 100px;
 	position: relative;
+  background-image: url(../images/footer.png);
 }
