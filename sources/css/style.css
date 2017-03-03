@@ -224,10 +224,32 @@ ul#web-icons li {
   height: 100px;
 }
 
-.main_information {
-  height: 800px;
+.background_bus {
+  height: 970px;
   background-image: url(../images/bus11.jpg);
   background-repeat: no-repeat;
+}
+
+.main_information {
+  height: 600px;
+  display: block;
+}
+
+.mercedes_img {
+  padding-left: 50px;
+  padding-top: 20px;
+}
+
+.mercedes_img img{
+  width: 400px;
+  height: 500px;
+}
+
+.company_info {
+  float: right;
+  display: inline-block;
+  height: 100%;
+  
 }
 
 
