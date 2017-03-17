@@ -1,0 +1,314 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+
+html {
+	height: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font: 12px/18px Arial, sans-serif;
+	height: 100%;
+}
+.wrapper {
+	/*width: 100%;*/
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	height: 500px;
+  width: 100%;
+  padding: 0px 0px;
+  margin-bottom: 0px;
+	background-image: url(../images/rsz_1rsz_1rsz_road.png);
+  background-repeat: no-repeat;
+  /*border-bottom-style: groove;
+  border-bottom-width: 3px;*/
+  font-family: Geneva, sans-serif;
+  position: absolute;
+  float: top;
+  display: inline-block;
+}
+
+.middle-line {
+  padding-top: 50px;
+  padding-left: 460px;
+  font-size: 20px;
+}
+
+.logo-location {
+  padding-top: 10px;
+  float: left;
+}
+
+.contacts {
+  float: right;
+  width: 520px;
+  height: 100%;
+  padding-right: 120px;
+  color: #130a5d;
+}
+
+.mid-contacts {
+  width: 260px;
+  height: 100%;
+  float: left;
+}
+
+.social-webs {
+  width: 100%;
+}
+
+.phone-numbers {
+  width: 180px;
+  height: 100%;
+  float: right;
+}
+
+#location-image {
+  width: 40px;
+  float: left;
+  vertical-align: middle;
+}
+
+#slogan {
+  font-size: 24px;
+  font-style: italic;
+  font-family: Georgian, sans-serif;
+  text-align: left;
+  color: #130a5d;
+}
+
+ul#web-icons li {
+  display: inline-block;
+  margin-left: 15px;
+  padding-top: 5px;
+  vertical-align: middle;
+}
+
+#web-icons img {
+  width: 50px;
+}
+
+#numbers li {
+  float: right;
+  padding-top: 3px;
+  height: 25px;
+  width: 185px;
+}
+
+#numbers img {
+  float: left;  
+}
+
+#numbers p {
+  float: right;
+}
+
+#location-text {
+  height: 40px;
+  padding-top: 6px;
+}
+
+#location-text a {
+  text-decoration: none;
+  color: #130a5d; 
+}
+
+/* Menu
+-----------------------------------------------------------------------------*/
+.menu {
+  width: 100%;
+  height: 50px;
+  margin-top: 200px;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  padding-top: 0px;
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+}
+
+#items a {
+  text-decoration: none;
+  color: #130a5d;
+}
+
+#items {
+  height: 100%;
+}
+
+.menu-items {
+  margin-left: 180px;
+  float: left;
+  height: 100%;
+}
+
+.menu-items li {
+  display: inline-block;
+  width: auto;
+  height: 36px;
+  padding-right: 40px;
+  padding-top: 20px;
+}
+
+.reserve-button {
+  width: 195px;
+  height: 60px;
+  padding-top: 8px;
+  margin-right: 153px;
+  margin-left: 1415px;
+  line-height: 1.2em;
+  position: fixed;
+  background-image: url(../images/button.png);
+  background-size: 100% 100%;
+}
+
+.reserve-button a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #130a5d; 
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.content {
+	padding: 0 0;
+  /*padding-top: 250px;*/
+  height: 100px;
+}
+
+.background_bus {
+  height: 970px;
+  background-image: url(../images/bus11.jpg);
+  background-repeat: no-repeat;
+}
+
+.main_information {
+  height: 600px;
+  display: block;
+}
+
+.drivers {
+  padding-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 0px;
+  width: 95%;
+  display: inline-block;
+}
+
+.drivers img{
+  width: 402px;
+  height: 560px;
+  float: left;
+}
+
+.company_info {
+  float: right;
+  display: block;
+  height: 100%; 
+}
+
+.drivers_char h1 {
+  float: right;
+  width: 75%;
+  height: 100px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 45px;
+  line-height: 1.0em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.drivers_char p {
+  font-size: 26px;
+  line-height: 1.2em;
+  width: 70%;
+  padding-left: 500px;
+  padding-top: 130px;
+}
+
+.background_mercedes {
+  height: 970px;
+  background-image: url(../images/bus7.jpg);
+  background-repeat: no-repeat;
+}
+
+#butterfly {
+  margin-left: 465px;
+  margin-top: 50px;
+  height: 200px;
+  width: 300px;
+}
+
+#wifi {
+  margin-left: 550px;
+  margin-top: 50px;
+  height: 150px;
+  width: 150px;
+}
+
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	margin-top: 2350px;
+	min-width: 800px;
+	max-width: 1920px;
+	height: 100px;
+	position: relative;
+  background-image: url(../images/footer.png);
+}
