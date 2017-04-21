@@ -52,7 +52,7 @@ function getFirstDay($year, $month, $day)
     return $first_week_day;
 }
 
-
+//Getting next day info.
 function nextDay($time)
 {
     $day = date("d", $time);
@@ -78,7 +78,7 @@ function fillCalendar(&$calendar, $time)
     } while ($index <= DAYS_IN_CALENDAR);
 }
 
-
+//Checking if the current day is a holiday.
 function checkHolidays($day)
 {
     foreach ($GLOBALS["holidays"] as $item) {
@@ -95,21 +95,21 @@ function createTable($calendar)
     }
 }
 
-
+//Creating of 4-weeks table
 function showMonth($calendar, $index)
 {
-    echo "<table border='1' 
+    echo "<table border='2' 
             cellpadding='2' 
             width='99%' 
             height='34%' 
             align='left' 
             background='" . seasonBackground($calendar[$index + 14][mon]) .
         "'>";
-
+    //Table header.
     echo "<tr><td colspan='8' 
             height='5%' 
-            align='center'><font size='5' color='red'><b> " . $calendar[$index + 14][year] . "</b></font></td></tr>";
-
+            align='center'><font size='5' color='red'><b> " . $calendar[$index + 13][year] . "</b></font></td></tr>";
+    //Cells contained month and the number of a day.
     for ($i = 1; $i <= 4; $i++) {
         echo "<tr>";
         echo "<td width='2%' align='center'>" . $i;
@@ -125,6 +125,7 @@ function showMonth($calendar, $index)
 }
 
 
+//Returns background image according to season.
 function seasonBackground($month)
 {
     switch ($month) {
@@ -147,17 +148,18 @@ function seasonBackground($month)
     }
 }
 
-
+//Getting request.
 $year = intval($_GET["year"]);
 
-
+//Creating of the calendar for the year in case it's number is valid.
 if ($year) {
     $first_day = getFirstDay($year, INITIAL_MONTH, INITIAL_DAY);
     fillCalendar($calendar, $first_day);
     createTable($calendar);
 }
+//Creating of the calendar for the current year in case requested number is invalid.
 else {
-    $first_day = getFirstDay(2016, INITIAL_MONTH, INITIAL_DAY);
+    $first_day = getFirstDay(date("Y", time()), INITIAL_MONTH, INITIAL_DAY);
     fillCalendar($calendar, $first_day);
     createTable($calendar);
 }
