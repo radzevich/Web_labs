@@ -1,87 +1,63 @@
-<?php
-    get_current_user();
-    session_start();
-
-    if (isset($_POST["send"]))
-    {
-        $from = htmlspecialchars($_POST["from"]);
-        $to = htmlspecialchars($_POST["to"]);
-        $subject = htmlspecialchars($_POST["subject"]);
-        $message = htmlspecialchars($_POST["message"]);
-
-        $_SESSION["from"] = $from;
-        $_SESSION["to"] = $to;
-        $_SESSION["subject"] = $subject;
-        $_SESSION["message"] = $message;
-
-        $error_from = "";
-        $error_to = "";
-        $error_subject = "";
-        $error_message = "";
-        $error = false;
-
-        if (!filter_var($from, FILTER_VALIDATE_EMAIL))
-        {
-            $error_from = "Введите коректный email";
-            $error = true;
-        }
-        if (!filter_var($to, FILTER_VALIDATE_EMAIL))
-        {
-            $error_to = "Введите коректный email";
-            $error = true;
-        }
-        if (strlen($subject) == 0)
-        {
-            $error_to = "Введите тему сообщения";
-            $error = true;
-        }
-        if (strlen($message) == 0)
-        {
-            $error_to = "Введите сообщение";
-            $error = true;
-        }
-
-        if (!$error)
-        {
-            $subject =  "=?utf-8?B?".base64_encode($subject)."?=";
-            $headers = "From: $from\r\nReply-to: $from\r\nContent-type: text/plain; charset=utf-8\r\n";
-            mail($to, $subject, $message, $headers);
-        }
+<!DOCTYPE html>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<style>
+    #feedback-form {
+        max-width: 400px;
+        padding: 2%;
+        border-radius: 3px;
+        background: #f1f1f1;
     }
+    #feedback-form [required] {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 2px 0 2% 0;
+        padding: 2%;
+        border: 1px solid rgba(0,0,0,.1);
+        border-radius: 3px;
+        box-shadow: 0 1px 2px -1px rgba(0,0,0,.2) inset, 0 0 transparent;
+    }
+    #feedback-form [required]:hover {
+        border-color: #7eb4ea;
+        box-shadow: 0 1px 2px -1px rgba(0,0,0,.2) inset, 0 0 transparent;
+    }
+    #feedback-form [required]:focus {
+        outline: none;
+        border-color: #7eb4ea;
+        box-shadow: 0 1px 2px -1px rgba(0,0,0,.2) inset, 0 0 4px rgba(35,146,243,.5);
+        transition: .2s linear;
+    }
+    #feedback-form [type="submit"] {
+        padding: 2%;
+        border: none;
+        border-radius: 3px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,.2) inset;
+        background: #669acc;
+        color: #fff;
+    }
+    #feedback-form [type="submit"]:hover {
+        background: #5c90c2;
+    }
+    #feedback-form [type="submit"]:focus {
+        box-shadow: 0 1px 1px #fff, inset 0 1px 2px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);
+    }
+</style>
 
-    echo file_get_contents("./input_form.html");
+<?php
+if (isset ($_POST['messageFF']))
+{
+    mail ("virtuain98@gmail.com",
+        "заполнена контактная форма с ".$_SERVER['HTTP_REFERER'],
+        "Имя: ".$_POST['nameFF']."\nEmail: ".$_POST['contactFF']."\nСообщение: ".$_POST['messageFF']);
+    echo ('<p style="color: green">Ваше сообщение получено, спасибо!</p>');
+}
 ?>
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Обратная связь</title>
-    </head>
-    <body>
-    <h2>Форма обратной связи</h2>
-    <form name="feedback" action="" method="post">
-        <label>От кого:</label>
-        <br/>
-        <input type="text" name="from" value="<?=$_SESSION["form"]?>" />
-        <span style='color: red'><?=$error_from?></span>
-        <br />
-        <label>Кому:</label>
-        <br/>
-        <input type='text' name='to' value="<?=$_SESSION["to"]?>" />
-        <span style='color: red'><?=$error_to?></span>
-        <br />
-        <label>Тема:</label>
-        <br/>
-        <input type='text' name='subject' value="<?=$_SESSION["subject"]?>" />
-        <span style="color: red"><?=$error_subject?></span>
-        <br />
-        <label>Сообщение:</label>
-        <br/>
-        <textarea name="message" cols="30" rows="10"><?=$_SESSION["message"]?></textarea>
-        <span style="color: red"><?=$error_message?></span>
-        <br />
-        <input type="submit" name="send" value="Отправить" />
-    </form>
-</body>
-</html>
+<form method="POST" id="feedback-form">
+    Как к Вам обращаться:
+    <input type="text" name="nameFF" required placeholder="фамилия имя отчество" x-autocompletetype="name">
+    Email для связи:
+    <input type="email" name="contactFF" required placeholder="адрес электронной почты" x-autocompletetype="email">
+    Ваше сообщение:
+    <textarea name="messageFF" required rows="5"></textarea>
+    <input type="submit" value="отправить">
+</form>
